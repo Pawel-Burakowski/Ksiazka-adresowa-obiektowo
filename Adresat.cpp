@@ -1,9 +1,4 @@
-#include "adresat.h"
-
-Adresat::Adresat()
-{
-
-}
+#include "Adresat.h"
 
 void Adresat::ustawIdUzytkownika(int noweIdUzytkownika)
 {
@@ -40,37 +35,37 @@ void Adresat::ustawAdres(string nowyAdres)
     adres = nowyAdres;
 }
 
-int Adresat::wczytajIdUzytkownika()
+int Adresat::pobierzIdUzytkownika()
 {
     return idUzytkownika;
 }
 
-int Adresat::wczytajId()
+int Adresat::pobierzId()
 {
     return id;
 }
 
-string Adresat::wczytajImie()
+string Adresat::pobierzImie()
 {
     return imie;
 }
 
-string Adresat::wczytajNazwisko()
+string Adresat::pobierzNazwisko()
 {
     return nazwisko;
 }
 
-string Adresat::wczytajNumerTelefonu()
+string Adresat::pobierzNumerTelefonu()
 {
     return numerTelefonu;
 }
 
-string Adresat::wczytajEmail()
+string Adresat::pobierzEmail()
 {
     return email;
 }
 
-string Adresat::wczytajAdres()
+string Adresat::pobierzAdres()
 {
     return adres;
 }

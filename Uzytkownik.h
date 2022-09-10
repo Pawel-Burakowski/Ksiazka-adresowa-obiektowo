@@ -9,7 +9,7 @@ class Uzytkownik
 {
     int id;
     string login;
-    string  haslo;
+    string haslo;
 
 public:
     void ustawId(int noweId);
