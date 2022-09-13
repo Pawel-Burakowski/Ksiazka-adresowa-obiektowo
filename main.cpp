@@ -47,8 +47,11 @@ int main()
             cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
             cout << "---------------------------" << endl;
             cout << "1. Dodaj adresata" << endl;
+            cout << "2. Wyszukaj po imieniu" << endl;
+            cout << "3. Wyszukaj po nazwisku" << endl;
             cout << "4. Wyswietl adresatow" << endl;
-            cout << "---------------------------" << endl;
+            cout << "5. Usun adresata" << endl;
+            cout << "6. Edytuj adresata" << endl;
             cout << "7. Zmien haslo" << endl;
             cout << "8. Wyloguj sie" << endl;
             cout << "---------------------------" << endl;
@@ -59,6 +62,12 @@ int main()
             {
             case '1':
                 ksiazkaAdresowa.dodawanieAdresata();
+                break;
+            case '2':
+                ksiazkaAdresowa.wyszukiwaniePoImieniu();
+                break;
+            case '3':
+                ksiazkaAdresowa.wyszukiwaniePoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wyswietlAdresatow();
