@@ -63,3 +63,13 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
     }
     else return false;
 }
+
+void KsiazkaAdresowa::wyszukiwaniePoImieniu()
+{
+    adresatMenedzer->wyszukajAdresatowPoImieniu();
+}
+
+void KsiazkaAdresowa::wyszukiwaniePoNazwisku()
+{
+    adresatMenedzer->wyszukajAdresatowPoNazwisku();
+}

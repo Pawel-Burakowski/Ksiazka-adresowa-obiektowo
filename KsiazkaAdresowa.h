@@ -34,6 +34,8 @@ public:
     int podajIdOstatniegoAdresata();
     void wyswietlAdresatow();
     bool czyUzytkownikJestZalogowany();
+    void wyszukiwaniePoImieniu();
+    void wyszukiwaniePoNazwisku();
 };
 
 #endif
