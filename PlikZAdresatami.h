@@ -8,17 +8,16 @@
 
 #include "MetodyPomocnicze.h"
 #include "Adresat.h"
+#include "PlikTekstowy.h"
 
-
-class PlikZAdresatami
+class PlikZAdresatami : public PlikTekstowy
 {
     int idOstatniegoAdresata;
     const string NAZWA_PLIKU_Z_ADRESATAMI;
     const string NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI;
-    bool czyPlikJestPusty();
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
 public:
-    PlikZAdresatami(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami), NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI(nazwaTymczasowegoPlikuZAdresatami){};
+    PlikZAdresatami(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami) : PlikTekstowy(nazwaPlikuZAdresatami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami), NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI(nazwaTymczasowegoPlikuZAdresatami) {};
     bool dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 
@@ -31,6 +30,9 @@ public:
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
     int pobierzZPlikuIdOstatniegoAdresata();
+    string pobierzNazweTymczasowegoPliku();
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    void edytujWybranaLinieWPliku(string liniaZDanymiAdresataOddzielonePionowymiKreskami, int idEdytowanegoAdresata);
 };
 
 #endif

@@ -38,6 +38,8 @@ public:
     int podajIdWybranegoAdresata();
     int wczytajLiczbeCalkowita();
     char wczytajZnak();
+    void edytujAdresata();
+    char wybierzOpcjeZMenuEdycja();
 };
 
 #endif
